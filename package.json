@@ -1,0 +1,27 @@
+{
+  "name": "paragraphs",
+  "version": "1.0.0",
+  "description": "An example lexer and parser for Jison.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srathbun/paragraphs"
+  },
+  "keywords": [
+    "lexer",
+    "parser",
+    "jison"
+  ],
+  "author": "Spencer Rathbun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/srathbun/paragraphs/issues"
+  },
+  "homepage": "https://github.com/srathbun/paragraphs",
+  "dependencies": {
+    "jison": "^0.4.13"
+  }
+}
