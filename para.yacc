@@ -8,15 +8,15 @@ var words = 0,
 %start paragraphs
 %flex
 
-%right WORD sentence
+%right WORD sentence paragraph
 %%
 
 paragraphs  : paragraphs paragraph  
 			| paragraph
 			;
 
-paragraph   : paragraph BLANK { paragraphs += 1; }
-			| sentence { sentences += 1; }
+paragraph   : paragraph BLANK { sentences +=1; paragraphs += 1; }
+			| sentence 
 			| EOF { 
 				paragraphs += 1;
 				printResults();
@@ -25,7 +25,7 @@ paragraph   : paragraph BLANK { paragraphs += 1; }
 
 sentence    : sentence WORD
 			| WORD
-			| '.'
+			| '.' { sentences += 1; }
 			;
 %%
 
